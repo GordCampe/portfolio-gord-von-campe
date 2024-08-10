@@ -12,3 +12,17 @@ body {
     max-height: 100%;
     display: block;
 }
+
+.photo-container {
+    overflow: hidden;
+}
+
+.photo-container img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.photo-container img:hover {
+    transform: scale(1.5); /* Adjust the scale factor as needed */
+    cursor: zoom-out;
+}
