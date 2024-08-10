@@ -4,5 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #d44242;
+    background-color: #c8c8c8;
+}
+
+.photo-container img {
+    display: block;
 }
