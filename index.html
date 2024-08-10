@@ -16,8 +16,17 @@
         let currentIndex = 0;
 
         function showPhoto(index) {
-            const photoElement = document.getElementById('photo');
-            photoElement.src = photos[index];
+            const img = document.getElementById('photo');
+            img.src = photos[index];
+
+            // Ensure the image takes up the full width initially
+            const containerWidth = document.body.clientWidth;
+            const originalWidth = img.naturalWidth;
+            const originalHeight = img.naturalHeight;
+
+            const aspectRatio = originalWidth / originalHeight;
+            img.style.width = containerWidth + 'px';
+            img.style.height = (containerWidth / aspectRatio) + 'px';
         }
 
         function nextPhoto() {
@@ -41,6 +50,11 @@
 
         // Navigate with mouse clicks
         document.querySelector('.photo-container').addEventListener('click', nextPhoto);
+
+        // Adjust image size after it loads to take up full width initially
+        window.onload = function() {
+            showPhoto(currentIndex);
+        };
     </script>
 </body>
 </html>

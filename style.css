@@ -7,6 +7,19 @@ body {
     background-color: #c8c8c8;
 }
 
+.photo-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow when zooming */
+}
+
 .photo-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
     display: block;
+    cursor: zoom-in;
 }
